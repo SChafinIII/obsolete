@@ -1,0 +1,264 @@
+
+/* For the Body */
+body {
+  background-color: transparent;
+  /* background-color: #D3D3D3;*/
+  margin: 0;
+  /* font: 100%/1.2 Georgia, "Times New Roman", serif;*/
+  /* font-family: Georgia;*/
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.page {
+  /* Center entire page in browser */
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+/* For Masthead content*/
+img {
+  border: 1px solid red;
+  float: none;
+}
+
+.masthead {
+  padding-top: 12px;
+}
+
+/* For the Navigation */
+.nav-main {
+  border-bottom: 1px solid #c7c7c8;
+  border-top: 5px solid #019443;
+  margin-top: 0;
+  padding: .45em 0 .5em;
+}
+
+.nav-main a {
+  /*Setting the font style for the navigation bar, make text uppercase*/
+  color: #292929;
+  /* font-family: Georgia;*/
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  /*Adds padding to the elements on the main navigation bar*/
+  display: inline-block;
+  padding: .5em .9em .5em 1.15em;
+  text-decoration: none;
+}
+
+.nav-main a:hover {
+  /*Changes the font color on the navigation bar while hovering*/
+  color: #029443;
+  /*text-decoration: none;*/
+}
+
+.nav-main a:active {
+  background-color: red;
+}
+
+.nav-main li {
+  text-align: center;
+  border-left: 1px solid #c8c8c8;
+  display: inline-block;
+  text-align: left;
+}
+
+.nav-main li:first-child {
+  border-left: none;
+}
+
+.nav-main li:last-child a {
+  padding-right: 0;
+}
+
+/* Set list style to disc*/
+ul {
+  list-style: disc;
+}
+
+/*Font coding for h1 and h2 and bottom margin*/
+
+h1 {
+  color: #292929;
+  /* font-family: Georgia; */
+  font-size: 2em;
+  font-weight: 300;
+  line-height: .975;
+  margin-bottom: .4125em;
+}
+
+h2 {
+  color: #292929;
+  /* font-family: Georgia; */
+  font-size: 1.75em;
+  font-weight: 300;
+  line-height: .975;
+  margin-bottom: .4125em;
+}
+
+/* Underlines email address when hovering over*/
+a:hover {
+  text-decoration: underline;
+}
+
+/*Styles for the calendar table*/
+
+table {
+  border-collapse: collapse;
+  text-align: left;
+  vertical-align: middle;
+  table-layout: fixed;
+  margin-bottom: 16px;
+}
+
+thead {
+  background-color: #292929;
+  color: white;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 2%;
+}
+
+/*
+thead th {
+  width: 33%;
+}
+*/
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+caption {
+  color: #292929;
+  /* font-family: Georgia; */
+  font-weight: 300;
+  font-size: 1.75em;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eee;
+}
+
+/* ————————————————————–
+  Tree core styles
+*/
+.tree { margin: 1em; }
+
+.tree input {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  }
+
+.tree input ~ ul { display: none; }
+
+.tree input:checked ~ ul { display: block; }
+
+/* ————————————————————–
+  Tree rows
+*/
+.tree li {
+  line-height: 1.2;
+  position: relative;
+  padding: 0 0 1em 1em;
+  }
+
+.tree ul li { padding: 1em 0 0 1em; }
+
+.tree > li:last-child { padding-bottom: 0; }
+
+/* ————————————————————–
+  Tree labels
+*/
+.tree_label {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  }
+
+label.tree_label { cursor: pointer; }
+
+label.tree_label:hover { color: #666; }
+
+/* ————————————————————–
+  Tree expanded icon
+*/
+label.tree_label:before {
+  background: #000;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  float: left;
+  margin: 0 1em 0 -2em;
+  width: 1em;
+  height: 1em;
+  border-radius: 1em;
+  content: '+';
+  text-align: center;
+  line-height: .9em;
+  }
+
+:checked ~ label.tree_label:before { content: '–'; }
+
+/* ————————————————————–
+  Tree branches
+*/
+.tree li:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -.5em;
+  display: block;
+  width: 0;
+  border-left: 1px solid #777;
+  content: "";
+  }
+
+.tree_label:after {
+  position: absolute;
+  top: 0;
+  left: -1.5em;
+  display: block;
+  height: 0.5em;
+  width: 1em;
+  border-bottom: 1px solid #777;
+  border-left: 1px solid #777;
+  border-radius: 0 0 0 .3em;
+  content: '';
+  }
+
+label.tree_label:after { border-bottom: 0; }
+
+:checked ~ label.tree_label:after {
+  border-radius: 0 .3em 0 0;
+  border-top: 1px solid #777;
+  border-right: 1px solid #777;
+  border-bottom: 0;
+  border-left: 0;
+  bottom: 0;
+  top: 0.5em;
+  height: auto;
+  }
+
+.tree li:last-child:before {
+  height: 1em;
+  bottom: auto;
+  }
+
+.tree > li:last-child:before { display: none; }
+
+.tree_custom {
+  display: block;
+  background: #eee;
+  padding: 1em;
+  border-radius: 0.3em;
+}
